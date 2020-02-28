@@ -1,0 +1,46 @@
+{
+  "name": "keyme",
+  "version": "1.0.0",
+  "description": "keyme online",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "build": "webpack --config webpack.config.js --mode production",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crayolalettuce/keyme-js.git"
+  },
+  "keywords": [
+    "product",
+    "list",
+    "&&",
+    "address",
+    "entry",
+    "form"
+  ],
+  "author": "Zhiqi Ye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crayolalettuce/keyme-js/issues"
+  },
+  "homepage": "https://github.com/crayolalettuce/keyme-js#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.6.4",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
