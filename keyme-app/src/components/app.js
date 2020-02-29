@@ -1,12 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
+import ProductList from '../pages/ProductListPage/ProductList';
 
 class App extends React.Component {
     render () {
         return (
-            <div>This is the initialized commit</div>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path='/productList'>
+                            <ProductList />
+                        </Route>
+                        <Route exact path='/' render={() => <Redirect to='/productList' />} />
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
         );
     };
 }
-
 
 export default App;

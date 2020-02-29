@@ -1,0 +1,27 @@
+.products {
+    width: 90%;
+    margin: auto;
+
+    .product-list-header {
+
+    }
+    
+    .product-list {
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
+    
+        .product-item {
+            width: 33%;
+            text-align: center;
+            
+            img {
+                cursor: pointer;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
