@@ -1,4 +1,4 @@
-import { FETCH_START, FETCH_LIST, FETCH_FAIL } from '../constants';
+import { FETCH_START, FETCH_LIST, FETCH_FAIL, ADD_PRODUCT } from '../constants';
 
 const initialState={
     pending: true,
@@ -28,6 +28,9 @@ export const productListReducer=(state=initialState, action)=> {
                 error: action.error
             };
         }
+        // case ADD_PRODUCT: {
+        //     const lists=state.lists.
+        // }
         default: {
             return state;
         }

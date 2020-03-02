@@ -1,27 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import Count from '../Count/Count';
 
 const Product=(props)=> {
     const item=props.item;
 
-    const addCart=(item)=> {
-        console.log(item);
-    }
-
     const addButton=()=> {
         return (
             <div>
-                <button onClick={()=>addCart(item)}>Add to Cart</button>
+                <button onClick={props.addProduct}>Add to Cart</button>
             </div>
         );
     }
 
     const orderCount=()=> {
         return (
-            <div>
-                orderCount
-            </div>
+            <Count />
         );
     }
 
@@ -41,7 +35,8 @@ const Product=(props)=> {
 }
 
 Product.propTypes={
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
+    addProduct: PropTypes.func.isRequired
 }
 
-export default connect()(Product);
+export default Product;

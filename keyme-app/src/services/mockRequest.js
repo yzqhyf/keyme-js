@@ -1,4 +1,4 @@
-import { fetch_product_start, fetch_product_list, fetch_product_fail } from '../redux/actions/productListActions';
+import { fetch_product_start, fetch_product_list, fetch_product_fail } from '../redux/ProductList/productListActions';
 import data from './data';
 
 export const fetch_product=()=> {

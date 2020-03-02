@@ -1,4 +1,4 @@
-import { FETCH_START, FETCH_LIST, FETCH_FAIL } from '../constants';
+import { FETCH_START, FETCH_LIST, FETCH_FAIL, ADD_PRODUCT } from '../constants';
 
 export const fetch_product_start=()=> {
     return {
@@ -20,4 +20,9 @@ export const fetch_product_fail=(error)=> {
     }
 };
 
-
+export const add_product=(item)=> {
+    return {
+        type: ADD_PRODUCT,
+        item
+    }
+};
