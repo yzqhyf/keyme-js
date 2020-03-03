@@ -54,10 +54,26 @@
         position: fixed;
         bottom: 200px;
         right: 0px;
-        width: 60px;
+        width: 85px;
         height: 60px;
+        
         button {
+            background-color: #fc6348;
+            color: white;
             cursor: pointer;
+
+            &::before {
+                content: 'Check Out!';
+                color: black;
+                background-color: whitesmoke;
+                height: 35px;
+                position: absolute;
+                top: -15px;
+                left: -45px;
+                width: 100%;
+                box-shadow: 0 5px 5px -2px #7c7a7a;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
