@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Product from '../../components/Product/Product';
+import Pagination from '../../components/Pagination/Pagination';
 import CheckoutButton from '../../components/CheckoutButton/CheckoutButton';
 
 import { update_cart } from '../../redux/Cart/cartActions'
@@ -11,11 +12,19 @@ import './ProductList.scss';
 class ProductList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            currentProducts: []
+        };
     }
 
     componentDidMount() {
         this.props.dispatch(fetch_product());
+    }
+
+    updateProducts=(currentItems)=> {
+        this.setState({
+            currentProducts: currentItems
+        });
     }
 
     addCart=(product)=> {
@@ -32,17 +41,19 @@ class ProductList extends React.Component {
     }
 
     render() {
-        const ProductList=this.props.products && this.props.products.map(product=> (
-            <Product key={product.id} item={product} addProduct={()=>this.addCart(product)} />
-        ));
         return (
             <div className='products'>
                 <div className='product-list-header'>
-                    <div>Add or Scan Your Free Key</div>
-                    <div>Free delivery</div>
+                    <div className='eyebrow-key'>Add or Scan Your Free Key</div>
+                    <div className='eyebrow-delivery'>Free delivery</div>
                 </div>
                 <div className='product-list'>
-                    {ProductList}
+                    {this.state.currentProducts.map(product=> (
+                       <Product key={product.id} item={product} addProduct={()=>this.addCart(product)} /> 
+                    ))}
+                </div>
+                <div className='product-list-pagination'>
+                    {this.props.products.length!==0 && <Pagination items={this.props.products}  handleChange={this.updateProducts} />}
                 </div>
                 <div className='checkout-button'>
                     <CheckoutButton />

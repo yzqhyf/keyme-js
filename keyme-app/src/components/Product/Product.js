@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Count from '../Count/Count';
 
+import './Product.scss';
+
 const Product=(props)=> {
     const item=props.item;
 
     const addButton=()=> {
         return (
-            <div>
+            <div className='cart-button'>
                 <button onClick={props.addProduct}>Add to Cart</button>
             </div>
         );
@@ -15,7 +17,9 @@ const Product=(props)=> {
 
     const orderCount=()=> {
         return (
-            <Count />
+            <div className='order-count'>
+                <Count />
+            </div>
         );
     }
 
@@ -25,8 +29,8 @@ const Product=(props)=> {
                 <img src={item.imageURL} alt={item.name} />
             </div>
             <div>
-                <div>{item.display_name}</div>
-                <div>{item.cost}</div>
+                <div className='product-name'>{item.display_name}</div>
+                <div className='product-cost'>{`$ ${item.cost}`}</div>
             </div>
             {item.order===0 ? addButton() : orderCount()}
             

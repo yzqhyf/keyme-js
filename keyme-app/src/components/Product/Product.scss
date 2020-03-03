@@ -1,0 +1,38 @@
+.product-item {
+    .product-name {
+        padding: 5px;
+    }
+    .product-cost {
+        color: #6e6e6e;
+    }
+    .cart-button {
+        button {
+            margin: 5px 0px;
+            padding: 5px 15px;
+            background-color: #fc6348;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+    .order-count {
+        input {
+            margin-left: 5px;
+        }
+        button {
+            margin: 5px 0px;
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            color: #fc6348;
+            border: 2px solid #fc6348;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}

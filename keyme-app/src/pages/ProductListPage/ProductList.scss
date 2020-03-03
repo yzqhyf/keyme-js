@@ -2,9 +2,31 @@
     width: 90%;
     margin: auto;
 
-    // .product-list-header {
+    .product-list-header {
+        width: 80%;
+        margin: 0 auto;
+        .eyebrow-key {
+            font-size: 2.0rem;
+            color: #fc6348;
+            margin: 20px 0px;
+        }
+        .eyebrow-delivery {
+            font-size: 1.6rem;
+            color: #23b9d2;
+            text-transform: uppercase;
+            overflow: hidden;
+        }
 
-    // }
+        .eyebrow-delivery:after {
+            content: '';
+            border-bottom: 2px solid #23b9d2;
+            display: inline-block;
+            width: 100%;
+            margin-right: -100%;
+            margin-left: 10px;
+        }
+        
+    }
     
     .product-list {
         display: flex;
@@ -16,11 +38,14 @@
     
         .product-item {
             width: 33%;
+            height: 260px;
             text-align: center;
             
             img {
                 cursor: pointer;
                 transform: rotate(-45deg);
+                width: inherit;
+                height: 155px;
             }
         }
     }
