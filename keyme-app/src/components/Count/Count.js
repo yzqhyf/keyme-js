@@ -12,7 +12,7 @@ const Count=(props)=> {
     }
 
     return (
-        <div>
+        <div className='order-count'>
             <button onClick={()=>setCount(Number(count)-1)} disabled={count<=0}>-</button>
             <input type='number' min={0} max={99} value={count} onChange={handleChange} />
             <button onClick={()=>setCount(Number(count)+1)} disabled={count>=99}>+</button>

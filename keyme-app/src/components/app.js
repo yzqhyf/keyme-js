@@ -14,7 +14,7 @@ class App extends React.Component {
                         <Route exact path='/productList'>
                             <ProductList />
                         </Route>
-                        <Route exact path='/AddressEntry'>
+                        <Route exact path='/addressEntry'>
                             <AddressEntry />
                         </Route>
                         <Route path='/' render={() => <Redirect to='/productList' />} />

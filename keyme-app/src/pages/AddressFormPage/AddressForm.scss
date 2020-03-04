@@ -1,0 +1,102 @@
+.address-form {
+    .address-form-header {
+        width: 80%;
+        margin: 0 auto;
+        .eyebrow-key {
+            font-size: 2.5rem;
+            color: #fc6348;
+            margin: 20px 0px;
+            word-wrap: break-word;
+        }
+        .eyebrow-delivery {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #6e6e6e;
+            overflow: hidden;
+            text-align: center;
+
+            &::after, &::before {
+                content: '';
+                border-bottom: 2px solid #6e6e6e;
+                display: inline-block;
+                vertical-align: middle;
+                width: 5%;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .info-form {
+        width: 80%;
+        margin: 20px auto;
+
+        form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 0;
+                &::placeholder {
+                    text-transform: uppercase;
+                }
+                padding: 15px;
+                border: 2px solid #9b9b9b;
+                margin: 6px 6px;
+            }
+
+            .name-input {
+                width: 100%;
+                
+            }
+            .address-input-group-two {
+                width: 80%;
+                display: flex;
+
+                .address-input {
+                    flex-grow: 3;
+                }
+                .apt-input {
+                    flex-grow: 1;
+                }
+            }
+            .address-input-group-three {
+                width: 80%;
+                display: flex;
+
+                .city-input {
+                    flex-grow: 2;
+                }
+                .state-input {
+                    flex-grow: 1;
+                }
+                .zip-input {
+                    flex-grow: 1;
+                }
+            }
+            .email-input {
+                width: 80%;
+            }
+
+            .description {
+                font-style: italic;
+                text-align: center;
+                font-size: 1.2rem;
+                color: #a4a4a4;
+                margin: 20px 0px;
+            }
+
+            .submit-button {
+                width: 250px;
+                background-color: #fc6348;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 600;
+                border-radius: 15px;
+            }
+        }
+    }
+}
