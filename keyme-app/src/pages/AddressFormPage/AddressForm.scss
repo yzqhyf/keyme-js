@@ -100,3 +100,21 @@
         }
     }
 }
+
+#modal {
+    .modal-content {
+        text-align: center;
+        word-wrap: break-word;
+        .confirmation-header {
+            font-size: 2.5rem;
+            color: #fc6348;
+            margin: 20px 0px;
+        }
+        .confirmation-message {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #6e6e6e;
+            white-space: pre-line; 
+        }
+    }
+}
